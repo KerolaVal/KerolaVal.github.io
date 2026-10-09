@@ -100,10 +100,37 @@
                 padding: 40px 15px;
             }
         }
+
+nav {
+    background: #12345a;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: #2878a8;
+    color: white;
+}
+
     </style>
 </head>
-
 <body>
+    <nav>
+        <a href="index.html">Etusivu</a>
+        <a href="about.html">Projektista</a>
+        <a href="links.html">Linkit</a>
+    </nav>
     <header>
         <h1>Ohjelmistokehittämisen lopputyö</h1>
         <p>Valtteri Kerola · Markdown-harjoitukset</p>
