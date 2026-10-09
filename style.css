@@ -1,0 +1,80 @@
+
+:root {
+    --background: #f1f5f9;
+    --surface: #ffffff;
+    --text: #243247;
+    --accent: #175985;
+    --nav: #12345a;
+}
+
+/* Sininen oletusteema */
+body.theme-blue {
+    --background: #f1f5f9;
+    --surface: #ffffff;
+    --text: #243247;
+    --accent: #175985;
+    --nav: #12345a;
+}
+
+/* Tumma teema */
+body.theme-dark {
+    --background: #111827;
+    --surface: #1f2937;
+    --text: #f3f4f6;
+    --accent: #7dd3fc;
+    --nav: #030712;
+}
+
+/* Vihreä teema */
+body.theme-green {
+    --background: #edf7f0;
+    --surface: #ffffff;
+    --text: #20382a;
+    --accent: #247448;
+    --nav: #164b32;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    background: var(--background);
+    color: var(--text);
+}
+
+nav {
+    padding: 18px;
+    background: var(--nav);
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 32px;
+    background: var(--surface);
+    border-radius: 14px;
+}
+
+h1, h2, h3 {
+    color: var(--accent);
+}
+
+a {
+    color: var(--accent);
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 14px;
+        padding: 20px;
+    }
+}
