@@ -4,165 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohjelmistokehittämisen lopputyö</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.8;
-            background: #f1f5f9;
-            color: #243247;
-        }
-
-        header {
-            padding: 60px 20px;
-            text-align: center;
-            color: white;
-            background: linear-gradient(135deg, #12345a, #2878a8);
-        }
-
-        header h1 {
-            margin: 0 0 12px;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-        }
-
-        header p {
-            margin: 0;
-            color: #e0f2fe;
-        }
-
-        main {
-            max-width: 950px;
-            margin: 35px auto;
-            padding: 35px;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px #19324a12;
-        }
-
-        h2, h3, h4 {
-            color: #175985;
-        }
-
-        h2 {
-            margin-top: 35px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #dbeafe;
-        }
-
-        a {
-            color: #0877b9;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        blockquote {
-            margin-left: 0;
-            padding: 12px 20px;
-            border-left: 4px solid #38a3d1;
-            background: #f1f8fc;
-        }
-
-        pre {
-            overflow-x: auto;
-            padding: 16px;
-            border-radius: 8px;
-            background: #172334;
-            color: #f8fafc;
-        }
-
-        code {
-            font-family: Consolas, monospace;
-        }
-
-        footer {
-            padding: 25px;
-            text-align: center;
-            color: #64748b;
-        }
-
-        @media (max-width: 600px) {
-            main {
-                margin: 15px;
-                padding: 20px;
-            }
-
-            header {
-                padding: 40px 15px;
-            }
-        }
-
-nav {
-    background: #12345a;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 16px;
-    border-radius: 8px;
-}
-
-nav a:hover {
-    background: #2878a8;
-    color: white;
-}
-
-    </style>
+    <title>Etusivu | Oma portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme-blue">
+
     <nav>
         <a href="index.html">Etusivu</a>
+        <a href="tehtava.html">Loppuprojekti</a>
         <a href="about.html">Projektista</a>
         <a href="links.html">Linkit</a>
     </nav>
+
     <header>
-        <h1>Ohjelmistokehittämisen lopputyö</h1>
-        <p>Valtteri Kerola · Markdown-harjoitukset</p>
+        <h1>Tervetuloa sivustolleni!</h1>
+        <p>Ohjelmistokehittäminen · ICT-opinnot</p>
     </header>
 
-    <main id="content">
-        <p>Ladataan tehtäviä...</p>
+    <main>
+        <h2>Hei!</h2>
+        <p>
+            Olen tehnyt tämän sivun ohjelmistokehittämisen työkalut kurssin lopputyönä.
+        </p>
+
+        <h2>Lopputyö</h2>
+        <p>
+            Tutustu Markdown-harjoitukseen.
+        </p>
+
+        <p>
+            <a href="tehtava.html">Avaa koulutehtävä →</a>
+        </p>
     </main>
 
     <footer>
-        Ohjelmistokehittämisen työkalut · Lopputyö
+        Oma portfolio · ICT-opinnot
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        fetch("index.md")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Markdown-tiedostoa ei löytynyt.");
-                }
-                return response.text();
-            })
-            .then(markdown => {
-                document.getElementById("content").innerHTML =
-                    marked.parse(markdown);
-            })
-            .catch(error => {
-                document.getElementById("content").innerHTML =
-                    "<h2>Tehtäviä ei voitu ladata</h2>" +
-                    "<p>Tarkista, että index.md on julkaistu samassa kansiossa.</p>";
-                console.error(error);
-            });
-    </script>
 </body>
 </html>
